@@ -1,0 +1,59 @@
+
+ <html>
+	<head>
+		<title>Prueba</title>
+		<meta charset="UTF-8">
+			  <script src="js/jquery.min.js" type="text/javascript"></script>
+        <script src="js/bootstrap.js" type="text/javascript"></script>
+        <link href="css/simplex.min.css" rel="stylesheet" type="text/css"/>
+     
+        </head>
+        <body>
+<div class="panel panel-primary"style="margin-left:500px;margin-top:100px;width:500px;height:440px">
+  <div class="panel-heading">
+   <center> <h3 style="font-size:30px"class="panel-title">Imagen giratoria</h3></center>
+  </div>
+  <div class="panel-body">
+   <div class="flip">
+	<div class="front">
+		<img style="width:300px;margin-left:70px"src="img/imagen4.jpg">
+	</div>
+	<div class="back">
+
+		  <img style="width:300px;margin-left:70px"src="img/imagen2.jpg">
+</div>
+</div>
+
+
+
+  </div>
+</div>
+<style type="text/css">
+.flip{
+	width:240px;
+	height: 200px;
+	margin:10px;
+
+}
+
+.flip>.front {
+	position: absolute;
+	transform: rotateY(0deg);
+	backface-visibility:hidden;
+	transition:transform.5s linear 0s;
+}
+.flip>.back{
+	position: absolute;
+	transform:perspective(600px) rotateY(180deg);
+	backface-visibility:hidden;
+	transition:transform.5s linear 0s;
+}
+.flip:hover>.front{
+	transform:perspective(600px) rotateY(-180deg);
+}
+.flip:hover>.back{
+	transform:perspective(600px) rotateY(0deg);
+}
+</style>
+
+</httml>
